@@ -128,7 +128,7 @@ final class AssignmentsStorage implements AssignmentsStorageInterface
             ->exists();
     }
 
-    public function add(Assignment $assignment): void
+    public function add(string $itemName, string $userId): void
     {
         $this
             ->database
@@ -136,9 +136,9 @@ final class AssignmentsStorage implements AssignmentsStorageInterface
             ->insert(
                 $this->tableName,
                 [
-                    'itemName' => $assignment->getItemName(),
-                    'userId' => $assignment->getUserId(),
-                    'createdAt' => $assignment->getCreatedAt(),
+                    'itemName' => $itemName,
+                    'userId' => $userId,
+                    'createdAt' => time(),
                 ],
             )
             ->execute();
