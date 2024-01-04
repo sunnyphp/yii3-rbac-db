@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/rbac-db",
+    "name": "sunnyphp/rbac-db",
     "type": "library",
     "description": "Yii RBAC Database storage",
     "keywords": [
