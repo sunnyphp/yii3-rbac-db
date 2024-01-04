@@ -271,7 +271,7 @@ final class ItemsStorage implements ItemsStorageInterface
         return $this->getItemsIndexedByName($rawItems);
     }
 
-    public function getDirectChildren(string $name): array
+    public function getChildren(string $name): array
     {
         $quoter = $this->database->getQuoter();
         $quotedJoinColumn = $quoter->quoteTableName($this->tableName) . '.' . $quoter->quoteColumnName('name');
